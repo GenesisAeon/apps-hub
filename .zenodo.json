@@ -1,0 +1,25 @@
+{
+  "title": "Apps-Hub — index of the GenesisAeon interactive sandbox series",
+  "description": "<p>A single hub linking all live GenesisAeon interactive physics sandboxes and the package catalog: Klimakatalog, AMOC-Kipppunkt, Amazonas-Kipppunkt, Meereis-Albedo-Sandbox, Gamma-Explorer, Wolken, Kaskaden-Sandbox, and Korallen-DHW-Sandbox. Each sandbox ports real, verified equations and coefficients from its underlying GenesisAeon science package -- no invented numbers, no UTAC/CREP/AFET overlay unless the package itself has one. Does not replace the Klimakatalog; indexes the interactive apps built on top of it. Part of the <strong>GenesisAeon</strong> ecosystem.</p>",
+  "creators": [
+    {
+      "name": "Römer, Johann",
+      "affiliation": "Independent Researcher / MOR Research Collective"
+    }
+  ],
+  "license": "MIT",
+  "upload_type": "software",
+  "access_right": "open",
+  "version": "0.1.0",
+  "keywords": [
+    "GenesisAeon",
+    "climate",
+    "interactive sandbox",
+    "open-science"
+  ],
+  "communities": [
+    {
+      "identifier": "genesisaeon"
+    }
+  ]
+}
