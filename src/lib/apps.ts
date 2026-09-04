@@ -29,9 +29,11 @@ export type HubApp = {
 };
 
 /**
- * Live URLs are recorded only after an HTTP 200 of the deployed site
- * (2026-09-04). Never derive a Vercel hostname from the GitHub repo name —
- * `wolken.vercel.app` and `korallen-dhw-sandbox.vercel.app` are 404s.
+ * Live URLs are recorded only after an HTTP 200 of the deployed site.
+ * Never derive a Vercel hostname from the GitHub repo name —
+ * `wolken.vercel.app` is a 404; the live app is `wolken-seven.vercel.app`.
+ * `korallen-dhw-sandbox.vercel.app` was 404 on first check (04.09.2026)
+ * and confirmed live later the same day.
  */
 export const APPS: HubApp[] = [
   {
@@ -109,9 +111,9 @@ export const APPS: HubApp[] = [
     index: "08",
     title: "Korallen-DHW-Sandbox",
     summary:
-      "NOAA Degree Heating Weeks: Bleichalarm, Erholungsfenster, Hitze plus Versauerung.",
+      "NOAA Degree Heating Weeks: fünf Alarmstufen, vier globale Ereignisse, Recovery-Fenster sechs Jahre.",
     kind: "mechanik",
-    liveUrl: null,
+    liveUrl: "https://korallen-dhw-sandbox.vercel.app",
     repoUrl: "https://github.com/GenesisAeon/korallen-dhw-sandbox",
   },
 ];
