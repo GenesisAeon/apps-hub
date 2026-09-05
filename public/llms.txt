@@ -1,0 +1,19 @@
+# Apps-Hub
+
+> Index aller acht GenesisAeon-Physik-Sandboxes und des Klimakatalogs. Jede Sandbox portiert die echten, verifizierten Gleichungen und Konstanten aus ihrem zugrundeliegenden GenesisAeon-Wissenschaftspaket — kein UTAC/CREP/AFET-Overlay, außer das Paket selbst nutzt es bereits.
+
+## Die 8 Apps
+1. Klimakatalog — https://klimakatalog.vercel.app — github.com/GenesisAeon/klimakatalog
+2. AMOC-Kipppunkt — https://amoc-kipppunkt.vercel.app — github.com/GenesisAeon/amoc-kipppunkt
+3. Amazonas-Kipppunkt — https://amazon-kipppunkt.vercel.app — github.com/GenesisAeon/amazon-kipppunkt
+4. Meereis-Albedo-Sandbox — https://meereis-albedo-sandbox.vercel.app — github.com/GenesisAeon/meereis-albedo-sandbox
+5. Γ-Explorer — https://gamma-explorer.vercel.app — github.com/GenesisAeon/gamma-explorer
+6. Wolken — https://wolken-seven.vercel.app — github.com/GenesisAeon/wolken
+7. Kaskaden-Sandbox — https://kaskaden-sandbox.vercel.app — github.com/GenesisAeon/kaskaden-sandbox
+8. Korallen-DHW-Sandbox — https://korallen-dhw-sandbox.vercel.app — github.com/GenesisAeon/korallen-dhw-sandbox
+
+## Maschinenlesbar
+- [context.json](/context.json) — Ökosystem-Aggregat: alle 8 Apps mit ihrem jeweiligen context.json/llms.txt, plus die real dokumentierten Beziehungen zwischen den Apps (z.B. welche Sandboxes dieselben Kipppunkte modellieren).
+- Schema: https://github.com/GenesisAeon/apps-hub/blob/main/docs/ai-context-schema.md
+
+Jede App unter ihrer eigenen Domain hat zusätzlich ihre eigenen `/llms.txt` und `/context.json` mit paketspezifischen Details.

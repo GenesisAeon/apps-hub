@@ -1,0 +1,88 @@
+{
+  "schema_version": "1.0.0",
+  "generated": "2026-09-05",
+  "hub": {
+    "title": "Apps-Hub",
+    "repo_url": "https://github.com/GenesisAeon/apps-hub",
+    "schema_doc_url": "https://github.com/GenesisAeon/apps-hub/blob/main/docs/ai-context-schema.md"
+  },
+  "apps": [
+    {
+      "id": "klimakatalog",
+      "title": "Klimakatalog",
+      "kind": "katalog",
+      "live_url": "https://klimakatalog.vercel.app",
+      "repo_url": "https://github.com/GenesisAeon/klimakatalog"
+    },
+    {
+      "id": "amoc-kipppunkt",
+      "title": "AMOC-Kipppunkt",
+      "kind": "kipppunkt",
+      "live_url": "https://amoc-kipppunkt.vercel.app",
+      "repo_url": "https://github.com/GenesisAeon/amoc-kipppunkt",
+      "context_json_url": "https://amoc-kipppunkt.vercel.app/context.json",
+      "llms_txt_url": "https://amoc-kipppunkt.vercel.app/llms.txt"
+    },
+    {
+      "id": "amazon-kipppunkt",
+      "title": "Amazonas-Kipppunkt",
+      "kind": "kipppunkt",
+      "live_url": "https://amazon-kipppunkt.vercel.app",
+      "repo_url": "https://github.com/GenesisAeon/amazon-kipppunkt",
+      "context_json_url": "https://amazon-kipppunkt.vercel.app/context.json",
+      "llms_txt_url": "https://amazon-kipppunkt.vercel.app/llms.txt"
+    },
+    {
+      "id": "meereis-albedo-sandbox",
+      "title": "Meereis-Albedo-Sandbox",
+      "kind": "mechanik",
+      "live_url": "https://meereis-albedo-sandbox.vercel.app",
+      "repo_url": "https://github.com/GenesisAeon/meereis-albedo-sandbox",
+      "context_json_url": "https://meereis-albedo-sandbox.vercel.app/context.json",
+      "llms_txt_url": "https://meereis-albedo-sandbox.vercel.app/llms.txt"
+    },
+    {
+      "id": "gamma-explorer",
+      "title": "Γ-Explorer",
+      "kind": "framework",
+      "live_url": "https://gamma-explorer.vercel.app",
+      "repo_url": "https://github.com/GenesisAeon/gamma-explorer",
+      "context_json_url": "https://gamma-explorer.vercel.app/context.json",
+      "llms_txt_url": "https://gamma-explorer.vercel.app/llms.txt"
+    },
+    {
+      "id": "wolken",
+      "title": "Wolken",
+      "kind": "mechanik",
+      "live_url": "https://wolken-seven.vercel.app",
+      "repo_url": "https://github.com/GenesisAeon/wolken",
+      "context_json_url": "https://wolken-seven.vercel.app/context.json",
+      "llms_txt_url": "https://wolken-seven.vercel.app/llms.txt"
+    },
+    {
+      "id": "kaskaden-sandbox",
+      "title": "Kaskaden-Sandbox",
+      "kind": "framework",
+      "live_url": "https://kaskaden-sandbox.vercel.app",
+      "repo_url": "https://github.com/GenesisAeon/kaskaden-sandbox",
+      "context_json_url": "https://kaskaden-sandbox.vercel.app/context.json",
+      "llms_txt_url": "https://kaskaden-sandbox.vercel.app/llms.txt"
+    },
+    {
+      "id": "korallen-dhw-sandbox",
+      "title": "Korallen-DHW-Sandbox",
+      "kind": "mechanik",
+      "live_url": "https://korallen-dhw-sandbox.vercel.app",
+      "repo_url": "https://github.com/GenesisAeon/korallen-dhw-sandbox",
+      "context_json_url": "https://korallen-dhw-sandbox.vercel.app/context.json",
+      "llms_txt_url": "https://korallen-dhw-sandbox.vercel.app/llms.txt"
+    }
+  ],
+  "cross_app_relations": [
+    { "app_id": "kaskaden-sandbox", "related_app_id": "amoc-kipppunkt", "relation": "shares_modeled_element", "detail": "AMOC is one of the 4 Wunderling tipping elements in kaskaden-sandbox's network." },
+    { "app_id": "kaskaden-sandbox", "related_app_id": "amazon-kipppunkt", "relation": "shares_modeled_element", "detail": "Amazon is one of the 4 Wunderling tipping elements in kaskaden-sandbox's network." },
+    { "app_id": "gamma-explorer", "related_app_id": "amoc-kipppunkt", "relation": "shares_source_package", "detail": "gamma-explorer's AMOC data point is copied from the same amoc-utac package amoc-kipppunkt ports." },
+    { "app_id": "gamma-explorer", "related_app_id": "amazon-kipppunkt", "relation": "shares_source_package", "detail": "gamma-explorer's Amazon data point is copied from the same amazon-utac package amazon-kipppunkt ports." }
+  ],
+  "note": "klimakatalog is a separate, larger Next.js application (catalog of ~90 GenesisAeon packages) and does not yet publish its own llms.txt/context.json under this schema; only the 7 sandbox apps built on top of it currently do."
+}
