@@ -1,4 +1,4 @@
-# GenesisAeon AI-Context Layer — Schema v1.0.0
+# GenesisAeon AI-Context Layer — Schema v1.1.0
 
 A machine-readable, non-semantic add-on for the GenesisAeon interactive
 sandbox series. It carries no intelligence of its own — no embeddings, no
@@ -31,7 +31,7 @@ sandboxes model the same tipping elements).
 
 ```jsonc
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.1.0",
   "generated": "YYYY-MM-DD",
   "app": {
     "id": "wolken",
@@ -53,6 +53,22 @@ sandboxes model the same tipping elements).
   "verified_quantities": [
     { "name": "a1", "value": 0.4435, "unit": null, "source": "Grundner et al. 2024, Table 2" }
   ],
+  "tipping": {
+    "kind": "saddle",              // saddle | fold | alarm_stage | sign_change | graph_edge | undefined
+    "value": 0.3849,               // null when kind is "undefined"
+    "unit": null,
+    "derived_from": "saddle-node fold amplitude of the normal form x-x^3 (system.py)",
+    "defined": true
+  },
+  "regen": {
+    "kind": "relaxation_rate",     // recovery_window | relaxation_rate | feedback_gain | undefined
+    "value": 0.08,
+    "unit": "year^-1",
+    "derived_from": "UTAC_R, the ODE's own relaxation-rate parameter",
+    "defined": true
+  },
+  "comparable": false,             // true only with an explicit normalization justification (see below)
+  "formula_ref": "amoc-utac system.py, dH/dt = r*H*(H*/K - H/K)",  // always this system's own equation, never a shared/default one
   "framework_overlay": { "used": false, "terms": [] },
   "honesty_checks": [
     { "name": "isAFifthGlobalBleachingEventConfirmed", "always_returns": false,
@@ -69,11 +85,46 @@ sandboxes model the same tipping elements).
 Fields are omitted (not left empty) when they don't apply — e.g. a package
 with no honesty-check functions has no `honesty_checks` key at all.
 
+### `tipping` / `regen` — the map contract (added v1.1.0)
+
+Grew out of a dialogue with Johann and a second AI (Grok) about what, if
+anything, is genuinely comparable across GenesisAeon's tipping-point
+packages. The answer settled on: **a shared schema of two slots, never a
+shared law and never a shared number.** Every mapped system declares a
+`tipping` value (what "tipping" operationally means *for that system*)
+and a `regen` value (what "moving back from the edge" means for that
+system) — but the two values come from that system's own equation or
+diagnosis (`formula_ref`), never from a shared UTAC-default formula, and
+are not assumed comparable across systems.
+
+- **`kind`** is drawn from a closed, extensible enum. Starting set for
+  `tipping`: `saddle` (saddle-node/fold bifurcation), `fold` (a
+  double-well's threshold band), `alarm_stage` (a discrete, empirically
+  defined alert level), `sign_change` (a feedback flips sign), `graph_edge`
+  (the tipping-relevant quantity is a network coupling strength, not a
+  scalar state threshold), `undefined`. Starting set for `regen`:
+  `recovery_window` (an empirical time-to-recover), `relaxation_rate` (a
+  literal rate constant in the system's own ODE), `feedback_gain`,
+  `undefined`.
+- **`defined: false`** (with `kind: "undefined"`, `value: null`) is a
+  valid, expected, machine-readable answer — not a missing field. Most
+  packages will not have a real regeneration-rate concept; forcing one
+  would manufacture a number the literature doesn't support. An empty
+  slot is more honest than a Γ.
+- **`comparable`** defaults to `false`. Setting it `true` requires stating
+  *which* normalization justifies comparing this system's `tipping`/
+  `regen` values to another's — the default assumption is that they are
+  not on the same scale and not interconvertible.
+- **`formula_ref`** always names this package's own equation or empirical
+  diagnosis. It is never "the UTAC default" or a reference to another
+  package's formula — that would silently reintroduce the shared-law
+  claim this contract exists to avoid.
+
 ## `context.json` — apps-hub aggregate shape
 
 ```jsonc
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.1.0",
   "generated": "YYYY-MM-DD",
   "hub": { "title": "Apps-Hub", "repo_url": "https://github.com/GenesisAeon/apps-hub" },
   "apps": [

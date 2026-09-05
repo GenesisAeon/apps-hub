@@ -8,7 +8,7 @@ abstract: >
   Meereis-Albedo-Sandbox, Gamma-Explorer, Wolken, Kaskaden-Sandbox, and
   Korallen-DHW-Sandbox. Does not replace the Klimakatalog; only indexes the
   interactive apps built on top of GenesisAeon's science packages.
-version: "0.2.0"
+version: "0.3.0"
 date-released: "2026-09-04"
 license: MIT
 repository-code: "https://github.com/GenesisAeon/apps-hub"
