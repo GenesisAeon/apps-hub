@@ -12,7 +12,9 @@
       "title": "Klimakatalog",
       "kind": "katalog",
       "live_url": "https://klimakatalog.vercel.app",
-      "repo_url": "https://github.com/GenesisAeon/klimakatalog"
+      "repo_url": "https://github.com/GenesisAeon/klimakatalog",
+      "context_json_url": "https://klimakatalog.vercel.app/context.json",
+      "llms_txt_url": "https://klimakatalog.vercel.app/llms.txt"
     },
     {
       "id": "amoc-kipppunkt",
@@ -84,5 +86,5 @@
     { "app_id": "gamma-explorer", "related_app_id": "amoc-kipppunkt", "relation": "shares_source_package", "detail": "gamma-explorer's AMOC data point is copied from the same amoc-utac package amoc-kipppunkt ports." },
     { "app_id": "gamma-explorer", "related_app_id": "amazon-kipppunkt", "relation": "shares_source_package", "detail": "gamma-explorer's Amazon data point is copied from the same amazon-utac package amazon-kipppunkt ports." }
   ],
-  "note": "klimakatalog is a separate, larger Next.js application (catalog of ~90 GenesisAeon packages) and does not yet publish its own llms.txt/context.json under this schema; only the 7 sandbox apps built on top of it currently do."
+  "note": "klimakatalog now also publishes its own /context.json: a full semantic map of its 46-package curated core (themes, DOIs, and a real cluster/cross-cluster-edge graph compiled only from relationships explicitly stated in each package's own abstract)."
 }
