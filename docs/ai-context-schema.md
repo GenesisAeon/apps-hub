@@ -58,14 +58,16 @@ sandboxes model the same tipping elements).
     "value": 0.3849,               // null when kind is "undefined"
     "unit": null,
     "derived_from": "saddle-node fold amplitude of the normal form x-x^3 (system.py)",
-    "defined": true
+    "defined": true,
+    "origin": "model_derived"      // literature | model_derived | undefined
   },
   "regen": {
     "kind": "relaxation_rate",     // recovery_window | relaxation_rate | feedback_gain | undefined
     "value": 0.08,
     "unit": "year^-1",
     "derived_from": "UTAC_R, the ODE's own relaxation-rate parameter",
-    "defined": true
+    "defined": true,
+    "origin": "model_derived"
   },
   "comparable": false,             // true only with an explicit normalization justification (see below)
   "formula_ref": "amoc-utac system.py, dH/dt = r*H*(H*/K - H/K)",  // always this system's own equation, never a shared/default one
@@ -119,6 +121,17 @@ are not assumed comparable across systems.
   diagnosis. It is never "the UTAC default" or a reference to another
   package's formula — that would silently reintroduce the shared-law
   claim this contract exists to avoid.
+- **`origin`** (added alongside the pilot, after a second-AI review):
+  `literature` when the value is taken directly from a cited empirical
+  or published-model result (e.g. Korallen's recovery window from Hughes
+  et al. 2018), `model_derived` when it's a property of this package's
+  own equation construction rather than an independent measurement (e.g.
+  AMOC's relaxation rate is the ODE's own calibration parameter, not a
+  value taken from Ditlevsen or Boers). This exists so a consuming agent
+  cannot read "AMOC has a `regen` value" and conclude "therefore every
+  ODE-based package has an independently measured regeneration rate" —
+  the two `regen` values are not the same evidence class, and origin
+  makes that explicit instead of implicit.
 
 ## `context.json` — apps-hub aggregate shape
 
