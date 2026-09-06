@@ -1,4 +1,4 @@
-export const KINDS = ["katalog", "kipppunkt", "mechanik", "framework", "streitkarte"] as const;
+export const KINDS = ["katalog", "kipppunkt", "mechanik", "framework"] as const;
 export type Kind = (typeof KINDS)[number];
 
 export const KIND_BADGE: Record<Kind, string> = {
@@ -6,7 +6,6 @@ export const KIND_BADGE: Record<Kind, string> = {
   kipppunkt: "Kipppunkt",
   mechanik: "Mechanik",
   framework: "Framework",
-  streitkarte: "Streitkarte",
 };
 
 export const KIND_FILTERS = [
@@ -15,19 +14,18 @@ export const KIND_FILTERS = [
   { id: "kipppunkt", label: "Kipppunkte" },
   { id: "mechanik", label: "Mechanik" },
   { id: "framework", label: "Framework" },
-  { id: "streitkarte", label: "Streitkarten" },
 ] as const;
 
 export type KindFilter = (typeof KIND_FILTERS)[number]["id"];
 
 export type HubApp = {
-  id: string
-  index: string
-  title: string
-  summary: string
-  kind: Kind
-  liveUrl: string | null
-  repoUrl: string
+  id: string;
+  index: string;
+  title: string;
+  summary: string;
+  kind: Kind;
+  liveUrl: string | null;
+  repoUrl: string;
 };
 
 /**
@@ -123,8 +121,8 @@ export const APPS: HubApp[] = [
     index: "09",
     title: "Klimasensitivität-Sandbox",
     summary:
-      "ECS-Streitkarte: vier reale Schätzungen, zwei Lager, is_genuinely_disputed() bleibt wahr.",
-    kind: "streitkarte",
+      "Vier Einträge, ein offener Streit: AR6, Myers 2021, Tan 2025 und CCF-Studien 2025/26. is_genuinely_disputed() bleibt wahr.",
+    kind: "mechanik",
     liveUrl: "https://klimasensitivitaet-sandbox.vercel.app",
     repoUrl: "https://github.com/GenesisAeon/klimasensitivitaet-sandbox",
   },

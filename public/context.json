@@ -82,7 +82,7 @@
     {
       "id": "klimasensitivitaet-sandbox",
       "title": "Klimasensitivität-Sandbox",
-      "kind": "streitkarte",
+      "kind": "mechanik",
       "live_url": "https://klimasensitivitaet-sandbox.vercel.app",
       "repo_url": "https://github.com/GenesisAeon/klimasensitivitaet-sandbox",
       "context_json_url": "https://klimasensitivitaet-sandbox.vercel.app/context.json",
