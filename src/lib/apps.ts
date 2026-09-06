@@ -19,13 +19,13 @@ export const KIND_FILTERS = [
 export type KindFilter = (typeof KIND_FILTERS)[number]["id"];
 
 export type HubApp = {
-  id: string
-  index: string
-  title: string
-  summary: string
-  kind: Kind
-  liveUrl: string | null
-  repoUrl: string
+  id: string;
+  index: string;
+  title: string;
+  summary: string;
+  kind: Kind;
+  liveUrl: string | null;
+  repoUrl: string;
 };
 
 /**
@@ -115,6 +115,16 @@ export const APPS: HubApp[] = [
     kind: "mechanik",
     liveUrl: "https://korallen-dhw-sandbox.vercel.app",
     repoUrl: "https://github.com/GenesisAeon/korallen-dhw-sandbox",
+  },
+  {
+    id: "klimasensitivitaet-sandbox",
+    index: "09",
+    title: "Klimasensitivität-Sandbox",
+    summary:
+      "Vier Einträge, ein offener Streit: AR6, Myers 2021, Tan 2025 und CCF-Studien 2025/26. is_genuinely_disputed() bleibt wahr.",
+    kind: "mechanik",
+    liveUrl: null,
+    repoUrl: "https://github.com/GenesisAeon/klimasensitivitaet-sandbox",
   },
 ];
 
