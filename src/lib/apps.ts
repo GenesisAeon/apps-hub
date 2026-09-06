@@ -1,4 +1,4 @@
-export const KINDS = ["katalog", "kipppunkt", "mechanik", "framework"] as const;
+export const KINDS = ["katalog", "kipppunkt", "mechanik", "framework", "streitkarte"] as const;
 export type Kind = (typeof KINDS)[number];
 
 export const KIND_BADGE: Record<Kind, string> = {
@@ -6,6 +6,7 @@ export const KIND_BADGE: Record<Kind, string> = {
   kipppunkt: "Kipppunkt",
   mechanik: "Mechanik",
   framework: "Framework",
+  streitkarte: "Streitkarte",
 };
 
 export const KIND_FILTERS = [
@@ -14,6 +15,7 @@ export const KIND_FILTERS = [
   { id: "kipppunkt", label: "Kipppunkte" },
   { id: "mechanik", label: "Mechanik" },
   { id: "framework", label: "Framework" },
+  { id: "streitkarte", label: "Streitkarten" },
 ] as const;
 
 export type KindFilter = (typeof KIND_FILTERS)[number]["id"];
@@ -115,6 +117,16 @@ export const APPS: HubApp[] = [
     kind: "mechanik",
     liveUrl: "https://korallen-dhw-sandbox.vercel.app",
     repoUrl: "https://github.com/GenesisAeon/korallen-dhw-sandbox",
+  },
+  {
+    id: "klimasensitivitaet-sandbox",
+    index: "09",
+    title: "Klimasensitivität-Sandbox",
+    summary:
+      "ECS-Streitkarte: vier reale Schätzungen, zwei Lager, is_genuinely_disputed() bleibt wahr.",
+    kind: "streitkarte",
+    liveUrl: "https://klimasensitivitaet-sandbox.vercel.app",
+    repoUrl: "https://github.com/GenesisAeon/klimasensitivitaet-sandbox",
   },
 ];
 

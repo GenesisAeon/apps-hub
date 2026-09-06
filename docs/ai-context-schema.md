@@ -36,7 +36,7 @@ sandboxes model the same tipping elements).
   "app": {
     "id": "wolken",
     "title": "Wolken",
-    "kind": "mechanik",           // katalog | kipppunkt | mechanik | framework
+    "kind": "mechanik",           // katalog | kipppunkt | mechanik | framework | streitkarte
     "live_url": "https://wolken-seven.vercel.app",
     "repo_url": "https://github.com/GenesisAeon/wolken",
     "llms_txt_url": "https://wolken-seven.vercel.app/llms.txt"

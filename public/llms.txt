@@ -1,8 +1,8 @@
 # Apps-Hub
 
-> Index aller acht GenesisAeon-Physik-Sandboxes und des Klimakatalogs. Jede Sandbox portiert die echten, verifizierten Gleichungen und Konstanten aus ihrem zugrundeliegenden GenesisAeon-Wissenschaftspaket — kein UTAC/CREP/AFET-Overlay, außer das Paket selbst nutzt es bereits.
+> Index aller neun GenesisAeon-Physik-Sandboxes und des Klimakatalogs. Jede Sandbox portiert die echten, verifizierten Gleichungen und Konstanten aus ihrem zugrundeliegenden GenesisAeon-Wissenschaftspaket — kein UTAC/CREP/AFET-Overlay, außer das Paket selbst nutzt es bereits.
 
-## Die 8 Apps
+## Die 9 Apps
 1. Klimakatalog — https://klimakatalog.vercel.app — github.com/GenesisAeon/klimakatalog
 2. AMOC-Kipppunkt — https://amoc-kipppunkt.vercel.app — github.com/GenesisAeon/amoc-kipppunkt
 3. Amazonas-Kipppunkt — https://amazon-kipppunkt.vercel.app — github.com/GenesisAeon/amazon-kipppunkt
@@ -11,6 +11,7 @@
 6. Wolken — https://wolken-seven.vercel.app — github.com/GenesisAeon/wolken
 7. Kaskaden-Sandbox — https://kaskaden-sandbox.vercel.app — github.com/GenesisAeon/kaskaden-sandbox
 8. Korallen-DHW-Sandbox — https://korallen-dhw-sandbox.vercel.app — github.com/GenesisAeon/korallen-dhw-sandbox
+9. Klimasensitivität-Sandbox — https://klimasensitivitaet-sandbox.vercel.app — github.com/GenesisAeon/klimasensitivitaet-sandbox (Streitkarte: ECS-Kontroverse, is_genuinely_disputed() bleibt wahr)
 
 ## Maschinenlesbar
 - [context.json](/context.json) — Ökosystem-Aggregat: alle 8 Apps mit ihrem jeweiligen context.json/llms.txt, plus die real dokumentierten Beziehungen zwischen den Apps (z.B. welche Sandboxes dieselben Kipppunkte modellieren).
