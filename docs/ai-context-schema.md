@@ -1,4 +1,4 @@
-# GenesisAeon AI-Context Layer — Schema v1.1.0
+# GenesisAeon AI-Context Layer — Schema v1.2.0
 
 A machine-readable, non-semantic add-on for the GenesisAeon interactive
 sandbox series. It carries no intelligence of its own — no embeddings, no
@@ -31,7 +31,7 @@ sandboxes model the same tipping elements).
 
 ```jsonc
 {
-  "schema_version": "1.1.0",
+  "schema_version": "1.2.0",
   "generated": "YYYY-MM-DD",
   "app": {
     "id": "wolken",
@@ -68,6 +68,14 @@ sandboxes model the same tipping elements).
     "derived_from": "UTAC_R, the ODE's own relaxation-rate parameter",
     "defined": true,
     "origin": "model_derived"
+  },
+  "entropy_bg": {
+    "kind": "undefined",           // free-form per system: radiative_forcing | heat_accumulation | freshwater_flux | undefined | ...
+    "value": null,
+    "unit": null,
+    "derived_from": null,
+    "defined": false,
+    "origin": "undefined"
   },
   "comparable": false,             // true only with an explicit normalization justification (see below)
   "formula_ref": "amoc-utac system.py, dH/dt = r*H*(H*/K - H/K)",  // always this system's own equation, never a shared/default one
@@ -133,11 +141,28 @@ are not assumed comparable across systems.
   the two `regen` values are not the same evidence class, and origin
   makes that explicit instead of implicit.
 
+### `entropy_bg` — the optional third slot (added v1.2.0)
+
+A third, independent slot for whatever background energetic/entropic
+quantity a system's own literature already reports — a radiative forcing
+in W/m², a heat-accumulation metric (DHW), a freshwater flux — never a
+shared measure like the retired `sigma_Phi ~= 1/16` invariant-metastability
+claim. Same shape as `tipping`/`regen` (`kind`, `value`, `unit`,
+`derived_from`, `defined`, `origin`), but `kind` is deliberately
+open-ended rather than a closed enum, since "background" quantities vary
+more across domains than tipping/regen concepts do.
+
+**Set only when the number already exists in the package's own
+`verified_quantities`** — never derived specifically to fill this slot.
+The expected, and informative, result is that this field stays
+`undefined` for most packages. Counting how often it stays empty is
+itself part of what this slot is for.
+
 ## `context.json` — apps-hub aggregate shape
 
 ```jsonc
 {
-  "schema_version": "1.1.0",
+  "schema_version": "1.2.0",
   "generated": "YYYY-MM-DD",
   "hub": { "title": "Apps-Hub", "repo_url": "https://github.com/GenesisAeon/apps-hub" },
   "apps": [
@@ -154,6 +179,6 @@ are not assumed comparable across systems.
 
 `schema_version` is independent of each repo's own release version. A
 breaking change to field names or structure bumps the minor version
-(1.0.0 → 1.1.0); this document is the source of truth and lives only here
+(e.g. 1.0.0 -> 1.1.0 -> 1.2.0); this document is the source of truth and lives only here
 in apps-hub — every other repo's `context.json` references this file's
 URL, it does not duplicate it.
