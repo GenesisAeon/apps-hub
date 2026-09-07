@@ -136,6 +136,26 @@ export const APPS: HubApp[] = [
     liveUrl: "https://ozeanversauerung-sandbox.vercel.app",
     repoUrl: "https://github.com/GenesisAeon/ozeanversauerung-sandbox",
   },
+  {
+    id: "wildfire-flood-cascade-sandbox",
+    index: "11",
+    title: "Wildfire-Flood-Cascade-Sandbox",
+    summary:
+      "Sieben real verifizierte Mechanismen — Feuer-Saison bis Versiegelung — aber keine Studie prüft die volle Kette als ein System.",
+    kind: "mechanik",
+    liveUrl: "https://wildfire-flood-cascade-sandbox.vercel.app",
+    repoUrl: "https://github.com/GenesisAeon/wildfire-flood-cascade-sandbox",
+  },
+  {
+    id: "permafrost-sandbox",
+    index: "12",
+    title: "Permafrost-Sandbox",
+    summary:
+      "ESA-CCI-Messung und Schuur-2022-Kohlenstoffzahlen: graduelles Feedback, laut IPCC AR6 kein bistabiler Kipppunkt.",
+    kind: "mechanik",
+    liveUrl: "https://permafrost-sandbox.vercel.app",
+    repoUrl: "https://github.com/GenesisAeon/permafrost-sandbox",
+  },
 ];
 
 export function isKindFilter(value: unknown): value is KindFilter {

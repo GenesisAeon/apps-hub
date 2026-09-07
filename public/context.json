@@ -96,20 +96,39 @@
       "repo_url": "https://github.com/GenesisAeon/ozeanversauerung-sandbox",
       "context_json_url": "https://ozeanversauerung-sandbox.vercel.app/context.json",
       "llms_txt_url": "https://ozeanversauerung-sandbox.vercel.app/llms.txt"
+    },
+    {
+      "id": "wildfire-flood-cascade-sandbox",
+      "title": "Wildfire-Flood-Cascade-Sandbox",
+      "kind": "mechanik",
+      "live_url": "https://wildfire-flood-cascade-sandbox.vercel.app",
+      "repo_url": "https://github.com/GenesisAeon/wildfire-flood-cascade-sandbox",
+      "context_json_url": "https://wildfire-flood-cascade-sandbox.vercel.app/context.json",
+      "llms_txt_url": "https://wildfire-flood-cascade-sandbox.vercel.app/llms.txt"
+    },
+    {
+      "id": "permafrost-sandbox",
+      "title": "Permafrost-Sandbox",
+      "kind": "mechanik",
+      "live_url": "https://permafrost-sandbox.vercel.app",
+      "repo_url": "https://github.com/GenesisAeon/permafrost-sandbox",
+      "context_json_url": "https://permafrost-sandbox.vercel.app/context.json",
+      "llms_txt_url": "https://permafrost-sandbox.vercel.app/llms.txt"
     }
   ],
   "cross_app_relations": [
     { "app_id": "kaskaden-sandbox", "related_app_id": "amoc-kipppunkt", "relation": "shares_modeled_element", "detail": "AMOC is one of the 4 Wunderling tipping elements in kaskaden-sandbox's network." },
     { "app_id": "kaskaden-sandbox", "related_app_id": "amazon-kipppunkt", "relation": "shares_modeled_element", "detail": "Amazon is one of the 4 Wunderling tipping elements in kaskaden-sandbox's network." },
     { "app_id": "gamma-explorer", "related_app_id": "amoc-kipppunkt", "relation": "shares_source_package", "detail": "gamma-explorer's AMOC data point is copied from the same amoc-utac package amoc-kipppunkt ports." },
-    { "app_id": "gamma-explorer", "related_app_id": "amazon-kipppunkt", "relation": "shares_source_package", "detail": "gamma-explorer's Amazon data point is copied from the same amazon-utac package amazon-kipppunkt ports." }
+    { "app_id": "gamma-explorer", "related_app_id": "amazon-kipppunkt", "relation": "shares_source_package", "detail": "gamma-explorer's Amazon data point is copied from the same amazon-utac package amazon-kipppunkt ports." },
+    { "app_id": "wildfire-flood-cascade-sandbox", "related_app_id": "kaskaden-sandbox", "relation": "shares_cascade_framing", "detail": "wildfire-flood-cascade-sandbox is a second, independent cascade-honesty case (P121: 7 mechanisms, combined chain not a single studied system) alongside kaskaden-sandbox's Wunderling network." }
   ],
   "note": "klimakatalog now also publishes its own /context.json: a full semantic map of its 47-package curated core (themes, DOIs, and a real cluster/cross-cluster-edge graph compiled only from relationships explicitly stated in each package's own abstract).",
   "tipping_regen_pilot": {
-    "status": "schema v1.2.0 (tipping + regen + entropy_bg + origin) piloted on 8 apps: amoc-kipppunkt, amazon-kipppunkt, korallen-dhw-sandbox, meereis-albedo-sandbox, kaskaden-sandbox, wolken, klimasensitivitaet-sandbox, ozeanversauerung-sandbox",
+    "status": "schema v1.2.0 (tipping + regen + entropy_bg + origin) piloted on 10 apps: amoc-kipppunkt, amazon-kipppunkt, korallen-dhw-sandbox, meereis-albedo-sandbox, kaskaden-sandbox, wolken, klimasensitivitaet-sandbox, ozeanversauerung-sandbox, wildfire-flood-cascade-sandbox, permafrost-sandbox",
     "origin": "grew out of a dialogue between Johann and a second AI (Grok) about what is genuinely comparable across tipping-point packages -- see PACKAGE_REGISTRY.md",
     "contract": "each piloted app declares its own tipping/regen/entropy_bg values via formula_ref to its own equation; comparable defaults to false; undefined is a valid, expected answer, not a missing field",
-    "control_case": "wolken, klimasensitivitaet-sandbox, and ozeanversauerung-sandbox all have tipping/regen undefined by design -- none is a bistable/threshold system (a diagnostic regression and two dispute comparisons), demonstrating that an all-or-mostly-empty map is a valid result",
+    "control_case": "wolken, klimasensitivitaet-sandbox, ozeanversauerung-sandbox, wildfire-flood-cascade-sandbox, and permafrost-sandbox all have tipping/regen undefined by design -- none is a bistable/threshold system (a diagnostic regression, two dispute comparisons, a cascade-of-mechanisms, and a gradual-feedback case per IPCC AR6), demonstrating that an all-or-mostly-empty map is a valid result",
     "frozen": "schema v1.2.0 is explicitly frozen per Grok's own instruction: no new kind values, comparable stays false, pilot scope extended only when a package is named explicitly",
     "not_yet_extended_to": "klimakatalog and gamma-explorer, and the wider ~47-package catalog -- deliberately not done in this pass"
   }
