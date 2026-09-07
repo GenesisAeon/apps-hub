@@ -1,10 +1,14 @@
 import { ArrowUpRight, Github } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
-import { KIND_BADGE, type HubApp } from "@/lib/apps";
+import type { HubApp } from "@/lib/apps";
+import { useLocale } from "@/lib/i18n/locale";
 import { cn } from "@/lib/utils";
 
 export function AppCard({ app }: { app: HubApp }) {
+  const { t } = useLocale();
   const comingSoon = !app.liveUrl;
+  const title = t.appTitle[app.id] ?? app.title;
+  const summary = t.appSummary[app.id] ?? app.summary;
 
   return (
     <article
@@ -18,13 +22,13 @@ export function AppCard({ app }: { app: HubApp }) {
       <div className="flex items-center justify-between gap-3">
         <p className="font-mono text-xs tracking-wider text-accent tabular-nums">{app.index}</p>
         <div className="flex flex-wrap items-center justify-end gap-1.5">
-          <Badge variant="accent">{KIND_BADGE[app.kind]}</Badge>
-          {comingSoon ? <Badge variant="outline">Demnächst</Badge> : null}
+          <Badge variant="accent">{t.kindBadge[app.kind]}</Badge>
+          {comingSoon ? <Badge variant="outline">{t.comingSoon}</Badge> : null}
         </div>
       </div>
 
-      <h2 className="mt-4 font-display text-xl leading-snug tracking-tight text-fg">{app.title}</h2>
-      <p className="mt-3 line-clamp-4 text-sm leading-relaxed text-muted">{app.summary}</p>
+      <h2 className="mt-4 font-display text-xl leading-snug tracking-tight text-fg">{title}</h2>
+      <p className="mt-3 line-clamp-4 text-sm leading-relaxed text-muted">{summary}</p>
 
       <div className="mt-auto flex flex-wrap items-center gap-x-5 gap-y-1 pt-6">
         {app.liveUrl ? (
@@ -34,11 +38,11 @@ export function AppCard({ app }: { app: HubApp }) {
             rel="noreferrer"
             className="inline-flex min-h-11 items-center gap-1 text-sm text-fg outline-none hover:text-accent focus-visible:ring-2 focus-visible:ring-ring/70"
           >
-            Öffnen
+            {t.open}
             <ArrowUpRight className="size-4" />
           </a>
         ) : (
-          <span className="inline-flex min-h-11 items-center text-sm text-subtle">Demnächst</span>
+          <span className="inline-flex min-h-11 items-center text-sm text-subtle">{t.comingSoon}</span>
         )}
         <a
           href={app.repoUrl}
@@ -47,7 +51,7 @@ export function AppCard({ app }: { app: HubApp }) {
           className="inline-flex min-h-11 items-center gap-1.5 text-sm text-muted outline-none hover:text-fg focus-visible:ring-2 focus-visible:ring-ring/70"
         >
           <Github className="size-3.5" />
-          Quellcode
+          {t.sourceCode}
         </a>
       </div>
     </article>
