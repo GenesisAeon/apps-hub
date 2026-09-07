@@ -1,6 +1,6 @@
 {
   "schema_version": "1.2.0",
-  "generated": "2026-09-06",
+  "generated": "2026-09-07",
   "hub": {
     "title": "Apps-Hub",
     "repo_url": "https://github.com/GenesisAeon/apps-hub",
@@ -87,6 +87,15 @@
       "repo_url": "https://github.com/GenesisAeon/klimasensitivitaet-sandbox",
       "context_json_url": "https://klimasensitivitaet-sandbox.vercel.app/context.json",
       "llms_txt_url": "https://klimasensitivitaet-sandbox.vercel.app/llms.txt"
+    },
+    {
+      "id": "ozeanversauerung-sandbox",
+      "title": "Ozeanversauerung-Sandbox",
+      "kind": "mechanik",
+      "live_url": "https://ozeanversauerung-sandbox.vercel.app",
+      "repo_url": "https://github.com/GenesisAeon/ozeanversauerung-sandbox",
+      "context_json_url": "https://ozeanversauerung-sandbox.vercel.app/context.json",
+      "llms_txt_url": "https://ozeanversauerung-sandbox.vercel.app/llms.txt"
     }
   ],
   "cross_app_relations": [
@@ -97,10 +106,10 @@
   ],
   "note": "klimakatalog now also publishes its own /context.json: a full semantic map of its 47-package curated core (themes, DOIs, and a real cluster/cross-cluster-edge graph compiled only from relationships explicitly stated in each package's own abstract).",
   "tipping_regen_pilot": {
-    "status": "schema v1.2.0 (tipping + regen + entropy_bg + origin) piloted on 7 apps: amoc-kipppunkt, amazon-kipppunkt, korallen-dhw-sandbox, meereis-albedo-sandbox, kaskaden-sandbox, wolken, klimasensitivitaet-sandbox",
+    "status": "schema v1.2.0 (tipping + regen + entropy_bg + origin) piloted on 8 apps: amoc-kipppunkt, amazon-kipppunkt, korallen-dhw-sandbox, meereis-albedo-sandbox, kaskaden-sandbox, wolken, klimasensitivitaet-sandbox, ozeanversauerung-sandbox",
     "origin": "grew out of a dialogue between Johann and a second AI (Grok) about what is genuinely comparable across tipping-point packages -- see PACKAGE_REGISTRY.md",
     "contract": "each piloted app declares its own tipping/regen/entropy_bg values via formula_ref to its own equation; comparable defaults to false; undefined is a valid, expected answer, not a missing field",
-    "control_case": "wolken and klimasensitivitaet-sandbox both have tipping/regen undefined by design -- neither is a bistable/threshold system (a diagnostic regression and a static ECS dispute comparison, respectively), demonstrating that an all-or-mostly-empty map is a valid result",
+    "control_case": "wolken, klimasensitivitaet-sandbox, and ozeanversauerung-sandbox all have tipping/regen undefined by design -- none is a bistable/threshold system (a diagnostic regression and two dispute comparisons), demonstrating that an all-or-mostly-empty map is a valid result",
     "frozen": "schema v1.2.0 is explicitly frozen per Grok's own instruction: no new kind values, comparable stays false, pilot scope extended only when a package is named explicitly",
     "not_yet_extended_to": "klimakatalog and gamma-explorer, and the wider ~47-package catalog -- deliberately not done in this pass"
   }

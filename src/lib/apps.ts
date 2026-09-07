@@ -126,6 +126,16 @@ export const APPS: HubApp[] = [
     liveUrl: "https://klimasensitivitaet-sandbox.vercel.app",
     repoUrl: "https://github.com/GenesisAeon/klimasensitivitaet-sandbox",
   },
+  {
+    id: "ozeanversauerung-sandbox",
+    index: "10",
+    title: "Ozeanversauerung-Sandbox",
+    summary:
+      "Grenze überschritten, Maßstab umstritten: Findlay 2025 vs. Findlay & Feely 2026. is_genuinely_disputed() bleibt wahr.",
+    kind: "mechanik",
+    liveUrl: "https://ozeanversauerung-sandbox.vercel.app",
+    repoUrl: "https://github.com/GenesisAeon/ozeanversauerung-sandbox",
+  },
 ];
 
 export function isKindFilter(value: unknown): value is KindFilter {

@@ -6,10 +6,10 @@ abstract: >
   A single hub linking all live GenesisAeon interactive physics sandboxes
   and the package catalog: Klimakatalog, AMOC-Kipppunkt, Amazonas-Kipppunkt,
   Meereis-Albedo-Sandbox, Gamma-Explorer, Wolken, Kaskaden-Sandbox,
-  Korallen-DHW-Sandbox, and Klimasensitivität-Sandbox. Does not replace the
-  Klimakatalog; only indexes the interactive apps built on top of
-  GenesisAeon's science packages.
-version: "0.5.3"
+  Korallen-DHW-Sandbox, Klimasensitivität-Sandbox, and Ozeanversauerung-
+  Sandbox. Does not replace the Klimakatalog; only indexes the interactive
+  apps built on top of GenesisAeon's science packages.
+version: "0.6.0"
 date-released: "2026-09-04"
 license: MIT
 repository-code: "https://github.com/GenesisAeon/apps-hub"
@@ -49,3 +49,6 @@ references:
   - type: software
     title: "klimasensitivitaet-sandbox"
     repository-code: "https://github.com/GenesisAeon/klimasensitivitaet-sandbox"
+  - type: software
+    title: "ozeanversauerung-sandbox"
+    repository-code: "https://github.com/GenesisAeon/ozeanversauerung-sandbox"
