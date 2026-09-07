@@ -1,6 +1,6 @@
 const LINKS = [
   { href: "https://github.com/GenesisAeon", label: "GitHub GenesisAeon" },
-  { href: "https://zenodo.org/search?q=genesisaeon", label: "Zenodo genesisaeon" },
+  { href: "https://zenodo.org/communities/genesisaeon", label: "Zenodo genesisaeon" },
   { href: "https://x.com/RoemerJohann", label: "X @RoemerJohann" },
   { href: "https://klimakatalog.vercel.app", label: "Klimakatalog" },
 ] as const;
