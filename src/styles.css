@@ -10,7 +10,7 @@
   --color-surface-2: #1c2421;
   --color-fg: #e8eee9;
   --color-muted: #8a948c;
-  --color-subtle: #6a736c;
+  --color-subtle: #7a8380;
   --color-accent: #9bb5a8;
   --color-accent-fg: #0b0f0e;
   --color-border: color-mix(in oklab, var(--color-fg) 12%, transparent);

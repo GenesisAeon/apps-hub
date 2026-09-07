@@ -62,7 +62,7 @@ function Home() {
           {visible.length === 0 ? (
             <div className="rounded-xl bg-surface px-6 py-16 text-center shadow-[var(--shadow-border)]">
               <p className="font-display text-xl text-fg">Keine Apps in dieser Kategorie</p>
-              <p className="mt-2 text-sm text-muted">Filter zurücksetzen, um alle acht zu sehen.</p>
+              <p className="mt-2 text-sm text-muted">Filter zurücksetzen, um alle {APPS.length} zu sehen.</p>
             </div>
           ) : (
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
