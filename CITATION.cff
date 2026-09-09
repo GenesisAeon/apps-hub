@@ -7,11 +7,13 @@ abstract: >
   and the package catalog: Klimakatalog, AMOC-Kipppunkt, Amazonas-Kipppunkt,
   Meereis-Albedo-Sandbox, Gamma-Explorer, Wolken, Kaskaden-Sandbox,
   Korallen-DHW-Sandbox, Klimasensitivität-Sandbox, Ozeanversauerung-Sandbox,
-  Wildfire-Flood-Cascade-Sandbox, and Permafrost-Sandbox. Does not replace
-  the Klimakatalog; only indexes the interactive apps built on top of
-  GenesisAeon's science packages.
-version: "0.7.0"
-date-released: "2026-09-07"
+  Wildfire-Flood-Cascade-Sandbox, Permafrost-Sandbox, Gletscher-Puffer-
+  Sandbox, River-Gauge-Shipping-Sandbox, Peatland-Rewetting-Sandbox, and
+  Urban-Heat-Island-Sandbox. Does not replace the Klimakatalog; only
+  indexes the interactive apps built on top of GenesisAeon's science
+  packages.
+version: "0.8.0"
+date-released: "2026-09-09"
 license: MIT
 repository-code: "https://github.com/GenesisAeon/apps-hub"
 keywords:
@@ -59,3 +61,15 @@ references:
   - type: software
     title: "permafrost-sandbox"
     repository-code: "https://github.com/GenesisAeon/permafrost-sandbox"
+  - type: software
+    title: "gletscher-puffer-sandbox"
+    repository-code: "https://github.com/GenesisAeon/gletscher-puffer-sandbox"
+  - type: software
+    title: "river-gauge-shipping-sandbox"
+    repository-code: "https://github.com/GenesisAeon/river-gauge-shipping-sandbox"
+  - type: software
+    title: "peatland-rewetting-sandbox"
+    repository-code: "https://github.com/GenesisAeon/peatland-rewetting-sandbox"
+  - type: software
+    title: "urban-heat-island-sandbox"
+    repository-code: "https://github.com/GenesisAeon/urban-heat-island-sandbox"

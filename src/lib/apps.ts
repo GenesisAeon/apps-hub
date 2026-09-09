@@ -156,6 +156,46 @@ export const APPS: HubApp[] = [
     liveUrl: "https://permafrost-sandbox.vercel.app",
     repoUrl: "https://github.com/GenesisAeon/permafrost-sandbox",
   },
+  {
+    id: "gletscher-puffer-sandbox",
+    index: "13",
+    title: "Gletscher-Puffer-Sandbox",
+    summary:
+      "Illustrative Puffer-Sensitivität, vier zitierte Kaskaden-Stufen — Biodiversität ist Kernbestandteil, kein Anhang.",
+    kind: "mechanik",
+    liveUrl: "https://gletscher-puffer-sandbox.vercel.app",
+    repoUrl: "https://github.com/GenesisAeon/gletscher-puffer-sandbox",
+  },
+  {
+    id: "river-gauge-shipping-sandbox",
+    index: "14",
+    title: "River-Gauge-Shipping-Sandbox",
+    summary:
+      "Niedrigwasser am Rhein: diskrete Evidenz (Bedoya-Maya, Vinke, Kaub-Pegel) — keine erfundene Interpolationskurve.",
+    kind: "mechanik",
+    liveUrl: "https://river-gauge-shipping-sandbox.vercel.app",
+    repoUrl: "https://github.com/GenesisAeon/river-gauge-shipping-sandbox",
+  },
+  {
+    id: "peatland-rewetting-sandbox",
+    index: "15",
+    title: "Peatland-Rewetting-Sandbox",
+    summary:
+      "Wiedervernässung ist eine echte CO2-Senke, aber Kreyling 2021: keine volle biologische Erholung, auch nicht nach Jahrzehnten.",
+    kind: "mechanik",
+    liveUrl: "https://peatland-rewetting-sandbox.vercel.app",
+    repoUrl: "https://github.com/GenesisAeon/peatland-rewetting-sandbox",
+  },
+  {
+    id: "urban-heat-island-sandbox",
+    index: "16",
+    title: "Urban-Heat-Island-Sandbox",
+    summary:
+      "Oberflächen- vs. Lufttemperatur sauber getrennt; Yang 2021s Regressionskoeffizient bleibt bewusst ungepinnt statt erfunden.",
+    kind: "mechanik",
+    liveUrl: "https://urban-heat-island-sandbox.vercel.app",
+    repoUrl: "https://github.com/GenesisAeon/urban-heat-island-sandbox",
+  },
 ];
 
 export function isKindFilter(value: unknown): value is KindFilter {

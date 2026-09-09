@@ -1,6 +1,6 @@
 {
   "schema_version": "1.2.0",
-  "generated": "2026-09-07",
+  "generated": "2026-09-09",
   "hub": {
     "title": "Apps-Hub",
     "repo_url": "https://github.com/GenesisAeon/apps-hub",
@@ -114,6 +114,42 @@
       "repo_url": "https://github.com/GenesisAeon/permafrost-sandbox",
       "context_json_url": "https://permafrost-sandbox.vercel.app/context.json",
       "llms_txt_url": "https://permafrost-sandbox.vercel.app/llms.txt"
+    },
+    {
+      "id": "gletscher-puffer-sandbox",
+      "title": "Gletscher-Puffer-Sandbox",
+      "kind": "mechanik",
+      "live_url": "https://gletscher-puffer-sandbox.vercel.app",
+      "repo_url": "https://github.com/GenesisAeon/gletscher-puffer-sandbox",
+      "context_json_url": "https://gletscher-puffer-sandbox.vercel.app/context.json",
+      "llms_txt_url": "https://gletscher-puffer-sandbox.vercel.app/llms.txt"
+    },
+    {
+      "id": "river-gauge-shipping-sandbox",
+      "title": "River-Gauge-Shipping-Sandbox",
+      "kind": "mechanik",
+      "live_url": "https://river-gauge-shipping-sandbox.vercel.app",
+      "repo_url": "https://github.com/GenesisAeon/river-gauge-shipping-sandbox",
+      "context_json_url": "https://river-gauge-shipping-sandbox.vercel.app/context.json",
+      "llms_txt_url": "https://river-gauge-shipping-sandbox.vercel.app/llms.txt"
+    },
+    {
+      "id": "peatland-rewetting-sandbox",
+      "title": "Peatland-Rewetting-Sandbox",
+      "kind": "mechanik",
+      "live_url": "https://peatland-rewetting-sandbox.vercel.app",
+      "repo_url": "https://github.com/GenesisAeon/peatland-rewetting-sandbox",
+      "context_json_url": "https://peatland-rewetting-sandbox.vercel.app/context.json",
+      "llms_txt_url": "https://peatland-rewetting-sandbox.vercel.app/llms.txt"
+    },
+    {
+      "id": "urban-heat-island-sandbox",
+      "title": "Urban-Heat-Island-Sandbox",
+      "kind": "mechanik",
+      "live_url": "https://urban-heat-island-sandbox.vercel.app",
+      "repo_url": "https://github.com/GenesisAeon/urban-heat-island-sandbox",
+      "context_json_url": "https://urban-heat-island-sandbox.vercel.app/context.json",
+      "llms_txt_url": "https://urban-heat-island-sandbox.vercel.app/llms.txt"
     }
   ],
   "cross_app_relations": [
@@ -121,7 +157,8 @@
     { "app_id": "kaskaden-sandbox", "related_app_id": "amazon-kipppunkt", "relation": "shares_modeled_element", "detail": "Amazon is one of the 4 Wunderling tipping elements in kaskaden-sandbox's network." },
     { "app_id": "gamma-explorer", "related_app_id": "amoc-kipppunkt", "relation": "shares_source_package", "detail": "gamma-explorer's AMOC data point is copied from the same amoc-utac package amoc-kipppunkt ports." },
     { "app_id": "gamma-explorer", "related_app_id": "amazon-kipppunkt", "relation": "shares_source_package", "detail": "gamma-explorer's Amazon data point is copied from the same amazon-utac package amazon-kipppunkt ports." },
-    { "app_id": "wildfire-flood-cascade-sandbox", "related_app_id": "kaskaden-sandbox", "relation": "shares_cascade_framing", "detail": "wildfire-flood-cascade-sandbox is a second, independent cascade-honesty case (P121: 7 mechanisms, combined chain not a single studied system) alongside kaskaden-sandbox's Wunderling network." }
+    { "app_id": "wildfire-flood-cascade-sandbox", "related_app_id": "kaskaden-sandbox", "relation": "shares_cascade_framing", "detail": "wildfire-flood-cascade-sandbox is a second, independent cascade-honesty case (P121: 7 mechanisms, combined chain not a single studied system) alongside kaskaden-sandbox's Wunderling network." },
+    { "app_id": "river-gauge-shipping-sandbox", "related_app_id": "gletscher-puffer-sandbox", "relation": "shares_source_domain", "detail": "river-gauge-shipping-sandbox (P130, logistics/economy) complements gletscher-puffer-sandbox (P99, hydrology/ecology) -- same glacier-fed-river topic, deliberately separate packages, cross-referenced in docs only." }
   ],
   "note": "klimakatalog now also publishes its own /context.json: a full semantic map of its 47-package curated core (themes, DOIs, and a real cluster/cross-cluster-edge graph compiled only from relationships explicitly stated in each package's own abstract).",
   "tipping_regen_pilot": {
